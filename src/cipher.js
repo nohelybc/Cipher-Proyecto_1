@@ -19,6 +19,5 @@ function encode(string, offset) {
 }
 
 
-export function encode(cipher) {
-    console.log
-}
+//export function encode(cipher) {
+//  console.log}
