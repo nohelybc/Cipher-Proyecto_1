@@ -1,26 +1,25 @@
 //const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-const cipher {
+const cipher = {
+    // originalmente tenía declaradas las variables para el desplazamiento y el mensaje a encriptar pero ahora he decidido declararlas en el archivo de indes
+    // esto es porque dichos valores se extraerían del DOM y de esta manera pueden quedar como 'variables globales'
 
-    //let desplazamiento = 4;
-    //let mensaje = "MI MENSAJE SECRETO";
+    function(mensaje, desplazamiento) {
+        mensaje = mensaje.trim();
 
-    mensaje = mensaje.trim();
+        function encode(mensaje, desplazamiento) {
+            let valorAscii = mensaje.charCodeAt(i);
 
-
-    //se define la función para nuestro cipher
-    function encode(string, offset) {
-        let valorAscii = mensaje.charCodeAt(i);
-
-        //como las mayusculas se encuentran en un rango de 65 y 90 en valores ascii entonces para nuestra formula de cifrado
-        if (valorAscii >= 65 && <= 90) {
-            desplazo = (valorAscii - 65 + 3) % 26 + 65;
+            if (valorAscii >= 65 && <= 90) {
+                desplazo = (valorAscii - 65 + 3) % 26 + 65;
+            }
         }
+
+
     }
-}
 
 
 
+};
 
-//export function encode(cipher) {
-//  console.log}
+export default cipher;

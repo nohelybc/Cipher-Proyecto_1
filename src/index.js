@@ -1,8 +1,7 @@
-// aquí irán las funciones que incluirán las interacciones entre las pantallas
-//primeramente se hará una función para reemplazar la primera pantalla por los elementos que habrán en la segunda
-function SegundaPantalla() {
+//se declaran las variables 'globales' que en este caso serían el numero de desplazamiento  y el mensaje a encriptar
+let mensaje = document.getElementById("mensaje").value;
+let desplazamiento = document.getElementById("desplazamiento").value;
 
-}
 
 import cipher from './cipher.js';
 
