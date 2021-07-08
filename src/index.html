@@ -15,15 +15,17 @@
     <body>
         <script src="index.js"></script>
         <h1 id="bienvenida">¡BIENVENIDX!</h1>
+        <p>Aquí iría otro párrafo introduciendo a lo que hace el cifrado, el concepto de cual es la temática y demás</p>
+        <br>
         <p>Cuantos espacios quieres recorrer</p>
-        <div>
-            <form id="cifrador" autocomplete="off">
-                <input id="mensaje" spellcheck="false" placeholder="ingrese texto" type="text" name="text">
-            </form>
-            <input id="desplazamiento" type="range" value="10" min="1" max="26" oninput="this.nextElementSibling.value = this.value">
-            <output>13</output>
-        </div>
-        <output>13</output>
+        <form>
+            <input maxlength="10" minlength="1" type="text" id="desplazamiento" name="numeros" required="" pattern="[1-9]+" placeholder="Escribe un número aquí">
+            <br>
+            <label for="mensaje">Escribe tu mensaje aquí</label>
+            <input type="text" id="mensaje" name="mensaje" required="" pattern="[a-zA-Z]+" placeholder="Escribe tu mensaje aquí">
+            <button id="cifrar">Cifrar</button>
+            <button>Descifrar</button>
+        </form>
 
     </body>
 
