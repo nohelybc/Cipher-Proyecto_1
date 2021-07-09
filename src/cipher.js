@@ -10,7 +10,7 @@ const cipher = {
         let valorAscii = 0;
 
         //se usa el for para recorrer nuestro string y así poder obtener la posición de nuestras letras en el alfabeto
-        for (i = 0; i < mensaje.length; i++) {
+        for (i = 0; i < string.length; i++) {
             let mensaje_ascii = string.charCodeAt(i);
 
             //como los valores de las mayusculas en código ascii se encuentran entre 65 y 90 se usa la siguiente condición
@@ -46,6 +46,25 @@ const cipher = {
 
         let resultado = "";
         let valorAscii = 0;
+
+        for (i = 0; i < string.length; i++) {
+            let mensaje_ascii = string.charCodeAt(i);
+
+            if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
+                valorAscii = ((mensaje_ascii + 65 - offset) % 26) + 65;
+            } else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
+                valorAscii = ((mensaje_ascii + 97 - offset) % 26) + 97;
+            } else {
+                valorAscii = ((mensaje_ascii) % 1) + 32;
+            }
+
+            let string_decode = String.fromCharCode(valorAscii);
+
+            resultado += string_decode;
+        }
+
+        return resultado;
+
     }
 
 };
