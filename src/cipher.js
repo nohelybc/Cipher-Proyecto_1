@@ -31,7 +31,7 @@ const cipher = {
 
             let string_encode = String.fromCharCode(valorAscii);
 
-            result += string_encode;
+            resultado += string_encode;
 
         }
 
@@ -39,8 +39,13 @@ const cipher = {
 
     },
 
-    decode: function(string, offset) {
 
+
+    decode: function(string, offset) {
+        string = string.trim();
+
+        let resultado = "";
+        let valorAscii = 0;
     }
 
 };
