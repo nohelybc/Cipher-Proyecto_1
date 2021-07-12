@@ -1,6 +1,20 @@
+window.addEventListener("load", inicio, true);
+
 import cipher from './cipher.js';
 
-document.getElementById("cifrar").addEventListener("click", (event) => {
+function eventos() {
+    document.getElementById("string").addEventListener("keyup", function() {
+        this.value = this.value.toUpperCase();
+    }, true);
+
+    document.getElementById("cifrar").addEventListener("click", function() {
+        let string = document.getElementById("string").value;
+        let offset = document.getElementById("offset").value;
+    })
+}
+
+
+/* document.getElementById("cifrar").addEventListener("click", (event) => {
     event.preventDefault();
     //se declaran las variables 'globales' que en este caso serían el numero de desplazamiento  y el mensaje a encriptar
     let string = document.getElementById("string").value;
@@ -14,6 +28,7 @@ document.getElementById("cifrar").addEventListener("click", (event) => {
 })
 
 console.log(string);
-console.log(offset);
+console.log(offset); 
 
-//console.log(cipher);
+console.log(cipher);
+*/
