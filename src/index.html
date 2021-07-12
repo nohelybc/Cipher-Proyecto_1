@@ -1,32 +1,44 @@
-<<!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:wght@500&display=swap" rel="stylesheet">
-        <title>Cifrado Cesar</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:wght@500&display=swap" rel="stylesheet">
+    <title>Cifrado Cesar</title>
+</head>
 
-    <body>
-        <script src="index.js"></script>
-        <h1 id="bienvenida">¡BIENVENIDX!</h1>
-        <p>Aquí iría otro párrafo introduciendo a lo que hace el cifrado, el concepto de cual es la temática y demás</p>
-        <br>
-        <p>Cuantos espacios quieres recorrer</p>
-        <form>
-            <input maxlength="10" minlength="1" type="text" id="desplazamiento" name="numeros" required="" pattern="[1-9]+" placeholder="Escribe un número aquí">
-            <br>
-            <label for="mensaje">Escribe tu mensaje aquí</label>
-            <input type="text" id="mensaje" name="mensaje" required="" pattern="[a-zA-Z]+" placeholder="Escribe tu mensaje aquí">
-            <button id="cifrar">Cifrar</button>
-            <button>Descifrar</button>
-        </form>
+<body>
+    <script src="index.js"></script>
+    <h1 class="title" id="bienvenida">¡BIENVENIDX!</h1>
+    <p class="textos">Aquí iría otro párrafo introduciendo a lo que hace el cifrado, el concepto de cual es la temática y demás</p>
+    <br>
+    <form>
+        <table>
+            <tr>
+                <td class="textos">Cuantos espacios quieres que tenga tu desplazamiento: </td>
+                <td>
+                    <input type="number" name="desplazamiento" id="offset" min="1" max="100" required/>
+                </td>
+            </tr>
+            <tr>
+                <td class="textos">Mensaje que deseas encriptar: </td>
+                <td>
+                    <input type="text" name="mensaje" id="string" pattern="[A-Z]" required/>
+                </td>
+            </tr>
+        </table>
 
-    </body>
+        <button type="button" id="cifrar">Cifrar</button>
+        <button type="button" id="descifrar">Descifrar</button>
+    </form>
 
-    </html>
+    <h2 class="title">Aquí tienes tu mensaje cifrado/descifrado, ¡Espero que te ayude!</h2>
+    <input type="text" id="output">
+</body>
+
+</html>
