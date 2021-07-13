@@ -4,8 +4,8 @@ import cipher from './cipher.js';
 let string = document.getElementById("string").value;
 let offset = document.getElementById("offset").value;
 
-console.log(string);
-console.log(offset);
+/* console.log(string);
+console.log(offset); */
 
 
 document.getElementById("cifrar").addEventListener("click", (event) => {
