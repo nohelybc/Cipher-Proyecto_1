@@ -6,8 +6,8 @@ const cipher = {
         string = string.trim(); //.trim sirve para...
 
         // en estas variables se guardarán el resultado la(s) letra(s) que se mostrarán y su valor en ascii
-        let resultado = "";
         let valorAscii = 0;
+        let resultado = "";
 
         //se usa el for para recorrer nuestro string y así poder obtener la posición de nuestras letras en el alfabeto
         for (i = 0; i < string.length; i++) {
@@ -43,9 +43,8 @@ const cipher = {
 
     decode: function(string, offset) {
         string = string.trim();
-
-        let resultado = "";
         let valorAscii = 0;
+        let resultado = "";
 
         for (i = 0; i < string.length; i++) {
             let mensaje_ascii = string.charCodeAt(i);
@@ -68,9 +67,5 @@ const cipher = {
     }
 
 };
-
-
-
-
 
 export default cipher;
