@@ -34,6 +34,7 @@ const cipher = {
             resultado += string_encode;
 
         }
+        console.log(resultado);
 
         return resultado;
 
