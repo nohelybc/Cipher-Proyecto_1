@@ -1,11 +1,52 @@
 :root {
-    background-color: lightpink;
+    background-color: #EFCDFF;
 }
 
-.title {
+h1 {
     font-family: 'Josefin Slab', serif;
+    font-size: 96px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 36px;
+    text-align: center;
 }
 
 .textos {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+}
+
+button {
+    /* position: absolute;*/
+    background: linear-gradient(180deg, #9571F6 10%, #FB6FBB 90%);
+    border-radius: 25px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    border: none;
+    width: 360px;
+    height: 85px;
+}
+
+input {
+    background-color: #E38DDD;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    height: 60px;
+}
+
+.cat {
+    width: 105px;
+}
+
+.censor {
+    width: 350px;
+    height: 350px;
 }
