@@ -15,9 +15,9 @@ document.getElementById("cifrar").addEventListener("click", (event) => {
     console.log(cipher.offset + cipher.string)
         /*const stringCifrado =*/
     cipher.encode(cipher.offset, cipher.string);
-    //let visualizarResultado = document.getElementById("output");
-    //visualizarResultado.innerHTML += stringCifrado;
-
+    let visualizar = document.getElementById("output");
+    visualizar.innerHTML += cipher.encode(cipher.offset, cipher.string);
+    visualizar.style.display = "inline";
 });
 
 
