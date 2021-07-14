@@ -23,10 +23,12 @@ document.getElementById("cifrar").addEventListener("click", (event) => {
 
 document.getElementById("descifrar").addEventListener("click", (event) => {
     event.preventDefault();
-
-    const stringDescifrado = cipher.decode(offset, string);
-    let visualizarResultado = document.getElementById("output");
-    visualizarResultado.innerHTML = stringDescifrado;
-
-    console.log(stringDescifrado);
+    cipher.offset = Number(document.getElementById('offset').value);
+    cipher.string = document.getElementById('string').value;
+    console.log(cipher.offset + cipher.string)
+        /*const stringCifrado =*/
+    cipher.decode(cipher.offset, cipher.string);
+    let visualizar = document.getElementById("output");
+    visualizar.innerHTML += cipher.decode(cipher.offset, cipher.string);
+    visualizar.style.display = "inline";
 });
