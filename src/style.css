@@ -8,6 +8,11 @@ h1 {
     text-align: center;
 }
 
+header {
+    position: relative;
+    justify-content: center;
+}
+
 h2 {
     font-family: 'Josefin Slab', serif;
     font-size: 36px;
