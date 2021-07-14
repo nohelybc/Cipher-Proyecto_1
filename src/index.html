@@ -34,7 +34,7 @@
             <tr>
                 <td class="textos">Mensaje que deseas encriptar: </td>
                 <td>
-                    <input type="text" name="mensaje" id="string" pattern="[A-Za-z ]" required/>
+                    <input type="text" name="mensaje" id="string" pattern="[A-Z ]" required/>
                 </td>
             </tr>
         </table>
@@ -44,7 +44,7 @@
     </form>
 
     <h2 class="title">Aquí tienes tu mensaje cifrado/descifrado, ¡Espero que te ayude!</h2>
-    <textarea type="text" id="output">
+    <div id="output"> </div>
     <br>
     <button type="button" id="copiar" onclick="copiar()">COPIAR</button>
 
