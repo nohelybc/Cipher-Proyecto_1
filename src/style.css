@@ -40,7 +40,7 @@ button {
     height: 85px;
 }
 
-input {
+.cipher {
     background-color: #E38DDD;
     border: none;
     border-radius: 25px;

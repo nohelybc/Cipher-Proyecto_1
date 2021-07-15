@@ -32,3 +32,10 @@ document.getElementById("descifrar").addEventListener("click", (event) => {
     visualizar.innerHTML += cipher.decode(cipher.offset, cipher.string);
     visualizar.style.display = "inline";
 });
+
+function copiar() {
+    let result = document.getElementById("output");
+    result.select();
+    result.setSelectionRange(0, 9999999);
+    document.execCommand("copy");
+}

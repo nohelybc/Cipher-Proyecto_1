@@ -20,22 +20,25 @@
         <h1 class="title" id="bienvenida">¡BIENVENIDX!</h1>
         <img class="cat" src="assets/cat.gif">
     </header>
-    <img class="censor" src="assets/censorship.png">
-    <p class="textos">Actualmente las redes sociales son un medio para comunicarnos muy importante, casi esencial, es por esta razón que muchos temas aún se siguen censurando, por lo que esta herramienta te servirá para evitar la censura, ya sea cuando quieras hablar de
-        temas LGBTQ+, sexualidad, feminismo, etc. Lo conseguirás cifrando las palabras para que sean indectables ante el algoritmo.</p>
+    <div>
+        <img class="censor" src="assets/censorship.png">
+        <p class="textos">Actualmente las redes sociales son un medio para comunicarnos muy importante, casi esencial, es por esta razón que muchos temas aún se siguen censurando, por lo que esta herramienta te servirá para evitar la censura, ya sea cuando quieras hablar
+            de temas LGBTQ+, sexualidad, feminismo, etc. Lo conseguirás cifrando las palabras para que sean indectables ante el algoritmo.</p>
+    </div>
+
     <br>
     <form>
         <table>
             <tr>
                 <td class="textos">Número de desplazamiento: </td>
                 <td>
-                    <input type="number" name="desplazamiento" id="offset" min="1" max="100" required/>
+                    <input type="number" class="cipher" name="desplazamiento" id="offset" min="1" max="100" required/>
                 </td>
             </tr>
             <tr>
                 <td class="textos">Mensaje que deseas encriptar: </td>
                 <td>
-                    <input type="text" name="mensaje" id="string" pattern="[A-Z]" required/>
+                    <input type="text" class="cipher" name="mensaje" id="string" pattern="[A-Z ]" required/>
                 </td>
             </tr>
         </table>
@@ -45,19 +48,11 @@
     </form>
 
     <h2 class="title">Aquí tienes tu mensaje cifrado/descifrado, ¡Espero que te ayude!</h2>
-    <p id="output" class="textos" style=display:none></p>
+    <textarea type="text" id="output" class="cipher" style=display:none></textarea>
     <br>
     <button type="button" id="limpiar" onclick="">LIMPIAR</button>
     <button type="button" id="copiar" onclick="copiar()">COPIAR</button>
 
-    <script>
-        function copiar() {
-            let result = document.getElementById("output");
-            result.select();
-            result.setSelectionRange(0, 9999999);
-            document.execCommand("copy");
-        }
-    </script>
 </body>
 
 </html>
