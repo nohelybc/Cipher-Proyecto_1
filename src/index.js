@@ -33,9 +33,9 @@ document.getElementById("descifrar").addEventListener("click", (event) => {
     visualizar.style.display = "inline";
 });
 
-function copiar() {
+document.getElementById("copiar").addEventListener("click", (event) => {
     let result = document.getElementById("output");
     result.select();
-    result.setSelectionRange(0, 9999999);
+    result.setSelectionRange(0, 999999);
     document.execCommand("copy");
-}
+});
