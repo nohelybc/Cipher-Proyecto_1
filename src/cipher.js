@@ -53,11 +53,9 @@ const cipher = {
 
             if ((mensaje_ascii >= 65) && (mensaje_ascii < 91)) {
                 valorAscii = ((mensaje_ascii + 65 - offset) % 26) + 65;
-            }
-            /*else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
-                        valorAscii = ((mensaje_ascii + 97 - offset) % 26) + 97;
-                    }*/
-            else {
+            } else if ((mensaje_ascii >= 97) && (mensaje_ascii < 123)) {
+                valorAscii = ((mensaje_ascii - 122 - offset) % 26) + 122;
+            } else {
                 valorAscii = ((mensaje_ascii) % 1) + 32;
             }
 
