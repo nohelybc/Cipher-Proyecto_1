@@ -32,7 +32,7 @@ h2 {
 }
 
 .items {
-    padding: 64px;
+    padding: 64 px;
     position: relative;
     justify-content: center;
 }
