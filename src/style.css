@@ -1,5 +1,5 @@
 :root {
-    background-color: #EFCDFF;
+    background-color: #fe938c;
 }
 
 h1 {
@@ -8,9 +8,12 @@ h1 {
     text-align: center;
 }
 
+.cat {
+    width: 120px;
+}
+
 header {
     display: flex;
-    flex-direction: column;
     align-items: center;
     position: relative;
     justify-content: center;
@@ -29,13 +32,13 @@ h2 {
 }
 
 .items {
-    background-color: #a0c4ff;
-    padding: 48px;
+    padding: 64px;
+    position: relative;
+    justify-content: center;
 }
 
 button {
-    /* position: absolute;*/
-    background: linear-gradient(180deg, #9571F6 10%, #FB6FBB 90%);
+    background: linear-gradient(180deg, #4281a4 10%, #9cafb7 90%);
     border-radius: 25px;
     font-family: 'Josefin Slab', serif;
     font-size: 48px;
@@ -44,10 +47,15 @@ button {
     border: none;
     width: 360px;
     height: 85px;
+    margin: 100px;
 }
 
 .cipher {
-    background-color: #E38DDD;
+    display: flex;
+    align-content: center;
+    position: relative;
+    justify-content: center;
+    background-color: #ead2ac;
     border: none;
     border-radius: 25px;
     font-family: 'Josefin Sans', sans-serif;
@@ -56,12 +64,12 @@ button {
     height: 60px;
 }
 
-.cat {
-    width: 105px;
-}
-
 .censor {
     width: 350px;
     height: 350px;
     padding: 48px;
+}
+
+.tematica {
+    display: flex;
 }

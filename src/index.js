@@ -1,12 +1,10 @@
 import cipher from './cipher.js';
 
 
-
 document.getElementById("cifrar").addEventListener("click", (event) => {
     event.preventDefault();
     cipher.offset = Number(document.getElementById('offset').value);
     cipher.string = document.getElementById('string').value;
-    console.log(cipher.offset + cipher.string);
     cipher.encode(cipher.offset, cipher.string);
     let visualizar = document.getElementById("output");
     visualizar.innerHTML += cipher.encode(cipher.offset, cipher.string);
@@ -17,7 +15,6 @@ document.getElementById("descifrar").addEventListener("click", (event) => {
     event.preventDefault();
     cipher.offset = Number(document.getElementById('offset').value);
     cipher.string = document.getElementById('string').value;
-    console.log(cipher.offset + cipher.string);
     cipher.decode(cipher.offset, cipher.string);
     let visualizar = document.getElementById("output");
     visualizar.innerHTML += cipher.decode(cipher.offset, cipher.string);
@@ -37,3 +34,11 @@ document.getElementById("limpiar").addEventListener("click", (event) => {
     let string = document.getElementById("string").value = "";
     let output = document.getElementById("output").innerHTML = "";
 });
+
+document.getElementById("cambiarPantalla").addEventListener("click", (event) => {
+    event.preventDefault();
+    let container = document.getElementById("container");
+    let items = document.getElementById("items");
+    container.style.display = "none";
+    items.style.display = "inline";
+})
