@@ -4,7 +4,6 @@ const output = document.getElementById("output");
 const container = document.getElementById("container");
 const items = document.getElementById("items");
 
-
 document.getElementById("cifrar").addEventListener("click", (event) => {
     event.preventDefault();
     cipher.offset = Number(document.getElementById('offset').value);
