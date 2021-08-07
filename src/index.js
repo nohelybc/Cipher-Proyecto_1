@@ -1,43 +1,44 @@
 import cipher from './cipher.js';
 
-const output = document.getElementById("output");
-const container = document.getElementById("container");
-const items = document.getElementById("items");
+
+const output = document.getElementById("output"); //se decalara output como global ya que se usará continuamente
+
 
 document.getElementById("cifrar").addEventListener("click", (event) => {
-    event.preventDefault();
-    cipher.offset = Number(document.getElementById('offset').value);
-    cipher.string = document.getElementById('string').value;
-    cipher.encode(cipher.offset, cipher.string);
-    output.innerHTML += cipher.encode(cipher.offset, cipher.string);
+    //el .addEventListener nos permite añadir un evento en el Id seleccionado, en este caso con el click
+    event.preventDefault(); //esto previene la función boton por default y así no se nos actualice la pag.
+    let offset = Number(document.getElementById('offset').value);
+    if (offset == "") {
+        alert("¡No olvides introducir el valor de tu desplazamiento!")
+    }
+    let string = document.getElementById('string').value;
+    if (string == "") {
+        alert("¡No olvides introducir tu mensaje!")
+    }
+    let result = cipher.encode(offset, string);
+    output.innerHTML = result; //imprime el resultado de la función cipher en este caso encode
 });
 
 
 document.getElementById("descifrar").addEventListener("click", (event) => {
     event.preventDefault();
-    cipher.offset = Number(document.getElementById('offset').value);
-    cipher.string = document.getElementById('string').value;
-    cipher.decode(cipher.offset, cipher.string);
-    output.innerHTML += cipher.decode(cipher.offset, cipher.string);
+    //se repite la estructura de input y output hecha en encode
+    let offset = Number(document.getElementById('offset').value);
+    if (offset == "") {
+        alert("¡No olvides introducir el valor de tu desplazamiento!")
+    }
+    let string = document.getElementById('string').value;
+    if (string == "") {
+        alert("¡No olvides introducir tu mensaje!")
+    }
+    let result = cipher.decode(offset, string);
+    output.innerHTML = result; //resultado decode
 });
 
 
 document.getElementById("copiar").addEventListener("click", (event) => {
     event.preventDefault();
-    output.select();
-    output.setSelectionRange(0, 999999);
-    document.execCommand("copy");
+    output.select(); //selecciona el texto ubicado en el output
+    output.setSelectionRange(0, 999999); //le da el rango al que puede seleccionar texto
+    document.execCommand("copy"); //genera la interacción con el portapapeles
 });
-
-document.getElementById("limpiar").addEventListener("click", (event) => {
-    event.preventDefault();
-    let offset = document.getElementById("offset").value = "";
-    let string = document.getElementById("string").value = "";
-    let output = document.getElementById("output").innerHTML = "";
-});
-
-document.getElementById("cambiarPantalla").addEventListener("click", (event) => {
-    event.preventDefault();
-    container.style.display = "none";
-    items.style.display = "inline";
-})

@@ -1,15 +1,5 @@
 :root {
-    background-color: #fe938c;
-}
-
-h1 {
-    font-family: 'Josefin Slab', serif;
-    font-size: 96px;
-    text-align: center;
-}
-
-.cat {
-    width: 120px;
+    background-color: #EFCDFF;
 }
 
 header {
@@ -19,57 +9,105 @@ header {
     justify-content: center;
 }
 
-h2 {
+h1 {
     font-family: 'Josefin Slab', serif;
-    font-size: 36px;
+    font-size: 64px;
     text-align: center;
+}
+
+.cat {
+    width: 120px;
+}
+
+.tematica {
+    display: flex;
+    width: 85%;
+    height: 400px;
+    margin: 75px;
 }
 
 .textos {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     padding: 24px;
 }
 
-.items {
-    padding: 64 px;
-    position: relative;
+.censor {
+    width: 180px;
+    height: 180px;
+    padding: 48px;
+}
+
+p {
+    margin: 18px;
+}
+
+.inputs {
+    display: flex;
     justify-content: center;
 }
 
 button {
-    background: linear-gradient(180deg, #4281a4 10%, #9cafb7 90%);
+    background: linear-gradient(180deg, #A584FF 10%, #3A29A3 90%);
     border-radius: 25px;
     font-family: 'Josefin Slab', serif;
-    font-size: 48px;
+    font-size: 24px;
     text-align: center;
     color: white;
     border: none;
-    width: 360px;
-    height: 85px;
-    margin: 100px;
+    width: 200px;
+    height: 45px;
+    margin: 45px;
+}
+
+.funciones {
+    display: flex;
+    justify-content: center;
 }
 
 .cipher {
-    display: flex;
-    align-content: center;
-    position: relative;
-    justify-content: center;
-    background-color: #ead2ac;
+    background-color: #E38DDD;
     border: none;
     border-radius: 25px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: xx-large;
     text-align: center;
-    height: 60px;
+    height: 45px;
 }
 
-.censor {
-    width: 350px;
-    height: 350px;
-    padding: 48px;
+#string {
+    width: 400px;
 }
 
-.tematica {
+h2 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.resultado {
     display: flex;
+    justify-content: center;
+}
+
+#output {
+    width: 500px;
+}
+
+.copiar {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.img-footer {
+    width: 75px;
 }
